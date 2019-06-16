@@ -5,7 +5,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Running build automation '
-        sh './grawdlew build --no-daemon'
+        sh 'grawdle clean build'
         archiveArtifacts artifacts: 'dist/trainSchedule.zip'
       }
 
